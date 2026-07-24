@@ -8,13 +8,11 @@
 
 namespace EventSphere\Repositories;
 
-if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly
-}
+use EventSphere\Contracts\EventRepositoryInterface;
 
-class EventRepository
+class PostMetaEventRepository implements EventRepositoryInterface
 {
-    public function get_all_events($limit = -1)
+    public function getAllEvents(int $limit = -1): array
     {
         $args = array(
             'post_type' => 'event',

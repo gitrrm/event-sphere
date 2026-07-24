@@ -8,12 +8,6 @@
 
 namespace EventSphere\PostTypes;
 
-if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly
-}
-
-
-
 class EventPostType
 {
     public function __construct()

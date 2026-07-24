@@ -7,16 +7,13 @@
 
 namespace EventSphere\Services;
 
-if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly
-}
-use EventSphere\Repositories\EventRepository;
+use EventSphere\Contracts\EventRepositoryInterface;
 
 class EventService
 {
-    private EventRepository $repository;
+    private EventRepositoryInterface $repository;
 
-    public function __construct(EventRepository $repository)
+    public function __construct(EventRepositoryInterface $repository)
     {
         $this->repository = $repository;
     }

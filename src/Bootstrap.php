@@ -9,8 +9,9 @@
 namespace EventSphere;
 
 use EventSphere\PostTypes\EventPostType;
-use EventSphere\Repositories\EventRepository;
+use EventSphere\Repositories\PostMetaEventRepository;
 use EventSphere\Services\EventService;
+use EventSphere\Admin\EventMetaBox;
 
 class Bootstrap
 {
@@ -24,8 +25,11 @@ class Bootstrap
     {
         new EventPostType();
 
-        $repository = new EventRepository();
+        $repository = new PostMetaEventRepository();
 
         new EventService( $repository );
+
+        new EventMetaBox();
+        
     }
 }
