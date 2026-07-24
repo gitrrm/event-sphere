@@ -12,9 +12,6 @@ if(!defined('ABSPATH')){
     exit; // Exit if accessed directly
 }
 
-require_once plugin_dir_path(__FILE__) . 'includes/Bootstrap.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-require_once plugin_dir_path(__FILE__) . 'includes/Autoloader.php';
-
-EventSphere\Autoloader::register();
 new EventSphere\Bootstrap();

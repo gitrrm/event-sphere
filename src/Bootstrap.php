@@ -8,11 +8,9 @@
 
 namespace EventSphere;
 
-if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly
-}
-
 use EventSphere\PostTypes\EventPostType;
+use EventSphere\Repositories\EventRepository;
+use EventSphere\Services\EventService;
 
 class Bootstrap
 {
@@ -22,8 +20,12 @@ class Bootstrap
         $this->init();
     }
 
-    public function init()
+    private function init()
     {
         new EventPostType();
+
+        $repository = new EventRepository();
+
+        new EventService( $repository );
     }
 }

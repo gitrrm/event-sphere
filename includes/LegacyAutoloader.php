@@ -1,7 +1,10 @@
 <?php
-
 /**
- * Plugin Autoloader.
+ * Legacy PSR-4 Style Autoloader
+ *
+ * This class was built to understand how PSR-4 autoloading works
+ * internally. It has been replaced by Composer's PSR-4 autoloader
+ * and is retained only for educational purposes.
  *
  * @package EventSphere
  */
@@ -13,14 +16,14 @@ if (! defined('ABSPATH')) {
 }
 
 
-class Autoloader
+class LegacyAutoloader
 {
     public static function register()
     {
         spl_autoload_register([__CLASS__, 'autoload']);
     }
 
-    public static function autoload($class)
+    public static function autoload(string $class): void
     {
 
         $prefix = 'EventSphere\\';

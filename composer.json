@@ -1,0 +1,18 @@
+{
+    "name": "gitrrm/event-sphere",
+    "description": "Enterprise WordPress Event Management Plugin",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "EventSphere\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rashmi Ranjan Muduli"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
